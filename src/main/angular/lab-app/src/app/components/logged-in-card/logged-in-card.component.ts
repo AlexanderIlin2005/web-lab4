@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {AuthService} from '../../services/auth.service';
+import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';  // если требуется для signOut
 
 @Component({
   selector: 'app-logged-in-card',
@@ -7,7 +7,9 @@ import {AuthService} from '../../services/auth.service';
   styleUrls: ['./logged-in-card.component.scss']
 })
 export class LoggedInCardComponent {
-  window = window;
-  constructor(public authService: AuthService) {
+  constructor(public authService: AuthService) {}
+
+  openGithub() {
+    window.open('https://github.com/AlexanderIlin2005/web-lab4', '_blank');
   }
 }
